@@ -25,6 +25,9 @@ export const roupas = connection.define('roupas', {
     preço:{
         type: Sequelize.FLOAT,
         allowNull: false
+    },
+    link:{
+        type:Sequelize.STRING
     }
 }, {
     freezeTableName: true,
@@ -32,6 +35,7 @@ export const roupas = connection.define('roupas', {
     updatedAt: false,
     timestamps: false
 })
+
 
 
 

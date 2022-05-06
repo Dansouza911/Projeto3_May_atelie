@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/style.css" rel="stylesheet">
+    <title>detalhes</title>
+</head>
+
+<body>
+    <%- include('./partials/header.ejs') %>
+        <main>
+
+            <section class="detalhes">
+                <p class="detalheNome">
+                    <%= roupaDetalhes.nome_roupa %>
+                </p>
+                <div id="imagem">
+                    <img src="<%= roupaDetalhes.img %> " alt="<%= roupaDetalhes.nome_roupa %> imagem">
+                </div>
+                <p id="preco">R$
+                    <%= roupaDetalhes.preço %> 
+                </p>
+                <p id="tamanho">tamanos:
+                    <%= roupaDetalhes.tamanho %> 
+                </p>
+                <a href="<%= roupaDetalhes.link %> " target="_blank">COMPRAR</a>
+                <p><%= roupaDetalhes.link %> dsada</p>
+
+            </section>
+            
+
+
+
+        </main>
+
+
+
+
+
+
+        <%- include('./partials/footer.ejs') %>
+</body>
+
+</html>

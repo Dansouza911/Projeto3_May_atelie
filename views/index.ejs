@@ -10,7 +10,29 @@
 <body>
     <%- include('./partials/header.ejs') %> 
     <main>
-        <h1>May Ateliê</h1>
+            <section class="card_principal">
+            <% catalogo.forEach((roupas)=>{ %>
+                <a href="/detalhes/<%= roupas.id %> "> 
+                    <article class="cards">
+                        <div class="card_name">
+                            <%= roupas.nome_roupa %>
+                        </div>
+                        <div class="card_img">
+                            <img src="<%= roupas.img %> " alt="<%= roupas.nome_roupa %> imagem"> 
+                            
+                        </div>
+                        
+                    </article>
+                <div></div>   
+                   
+
+                   <% } ) %> 
+
+                </a>
+        </section>
+        
+
+        
     </main>
     
 
