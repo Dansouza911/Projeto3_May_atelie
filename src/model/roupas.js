@@ -36,12 +36,16 @@ export const roupas = connection.define('roupas', {
     timestamps: false
 })
 
-/* function initTable () {
-    roupas.async()
-
+const initTable = async () => {
+    try {
+        await roupas.sync()
+    }
+    catch(error){
+        return error.message
+    }
 }
 
-initTable() */
+initTable()
 
 
 
