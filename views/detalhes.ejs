@@ -11,7 +11,7 @@
 
 <body>
     <%- include('./partials/header.ejs') %>
-        <main>
+        <main class="detalhes">
 
             <section class="detalhes">
                 <p class="detalheNome">
@@ -20,14 +20,19 @@
                 <div id="imagem">
                     <img src="<%= roupaDetalhes.img %> " alt="<%= roupaDetalhes.nome_roupa %> imagem">
                 </div>
-                <p id="preco">R$
-                    <%= roupaDetalhes.preço %> 
+                <p class="detalheNome" >R$
+                    <%= roupaDetalhes.preço %>,00 
                 </p>
-                <p id="tamanho">tamanos:
+                <p class="detalheTamanho" >Tamanos:
                     <%= roupaDetalhes.tamanho %> 
                 </p>
-                <a href="<%= roupaDetalhes.link %> " target="_blank">COMPRAR</a>
-                <p><%= roupaDetalhes.link %> dsada</p>
+                <div id="button_">
+                <a  href="<%= roupaDetalhes.link %> " target="_blank">
+                    <button id="buttonTrans" value="0" class="shiny-button"><strong>Comprar</strong>
+                    
+                </a>
+                </div>
+                
 
             </section>
             

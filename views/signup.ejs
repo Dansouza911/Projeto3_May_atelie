@@ -2,65 +2,69 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="/css/style.css" rel="stylesheet">
-    <title>Cadastro</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="/css/style.css" rel="stylesheet">
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <title>Cadastro</title>
+
 </head>
 
 <body>
-    <%- include('./partials/header.ejs') %>
-<main>
-        <section id="cadastro">
-            <div>
-                <h2>Cadastre um novo item!</h2>
-                <fieldset class="fildMain">
-                    <form action="/cadastro" method="post">
-                    <fieldset>
-                        <label for="nome">Nome:</label>
-                        <input type="text" id="nome" name="nome" placeholder="Nome do item" />
-                </fieldset>
+  <%- include('./partials/header.ejs') %>
 
-                <fieldset>
-                    <label for="preco">Preço</label>
-                    <input
-                      type="text"
-                      id="preco"
-                      name="preco"
-                      placeholder="Preço do item"
-                    />
-                  </fieldset>
+    <main>
+     
+      <section id="cadastro">
+       
+          <h2>Cadastre um novo item!</h2>
+          <fieldset class="fildMain">
+            <form action="/signup" method="post">
+              
+              
+                <label for="nome_roupa">Nome:</label>
+                <input type="text" id="nome_roupa" name="nome_roupa" placeholder="Nome do item" required />
+              
+                <label for="img">Imagem</label>
+                <input required type="text" id="img" name="img" placeholder="Imagem do item" />
+              
+                <label for="preço">Preço</label>
+                <input required type="text" id="preço" name="preço" placeholder="Preço do item" />
+              
+                <label for="tamanho">Tamanhos</label>
+                <input required type="text" id="tamanho" name="tamanho" placeholder="Tamanhos do item" />
+              
+                <label for="link">Link</label>
+                <input required type="text" id="link" name="link" placeholder="Link do shopee" />
+              
 
-                  <fieldset>
-                    <label for="tamanhos">Tamanhos</label>
-                    <input
-                      type="text"
-                      id="tamanhos"
-                      name="tamanhos"
-                      placeholder="Tamanhos do item"
-                    />
-                  </fieldset>
+             
+                <button id="btn_submit" type="submit"> Cadastrar </button>
+              
+            </form>
+          </fieldset>
 
-                  <fieldset>
-                    <label for="link">Link</label>
-                    <input
-                      type="text"
-                      id="link"
-                      name="link"
-                      placeholder="Link do shopee"
-                    />
-                  </fieldset>
 
-                    </form>
-                </fieldset>
+        
 
-            </div>
+      </section>
 
-        </section>
+    </main>
 
-      </main>
-        <%- include('./partials/footer.ejs') %>
+    <% if (toggle) { %>
+      <script>
+          Swal.fire({
+          icon: 'success',
+          title: 'Sucesso!!!',
+          text: 'Seu item foi cadastrado!',
+          timer: 3000
+            })
+            setInterval(()=> {window.location.href = '/'}, 3000)
+          </script>
+  <% } %>
+
+    <%- include('./partials/footer.ejs') %>
 </body>
 </body>
 

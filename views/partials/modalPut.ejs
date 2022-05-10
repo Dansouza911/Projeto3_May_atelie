@@ -1,0 +1,54 @@
+<section class="modal-overlay" id="ovarlay">
+    <div class="modal" id="modal">
+        <div class="modal-header">
+            <h3>Atualizar Item</h3>
+            <a href="/" id="close-modal-put">X</a>
+        </div>
+
+        <div class="modal-body">
+            <form class="form-modal" action="/update/<%= roupaAtualPut.id %> " method="post">
+                      
+            
+                    <label class="label" for="nome_roupa">Nome:</label>
+                    <input class="input" type="text" id="nome_roupa" name="nome_roupa" value="<%= roupaAtualPut.nome_roupa %> " required />
+            
+                <label class="label" for="preço">Preço</label>
+                <input class="input" required
+                  type="text"
+                  id="preço"
+                  name="preço"
+                  value="<%= roupaAtualPut.preço %>"
+                >
+            
+              <label class="label" for="img">Imagem</label>
+              <input class="input" required type="url" id="img" name="img" value="<%= roupaAtualPut.img %> "/>
+           
+                <label class="label" for="tamanho">Tamanhos</label>
+                <input class="input" required
+                  type="text"
+                  id="tamanho"
+                  name="tamanho"
+                  value="<%= roupaAtualPut.tamanho %>"
+                />
+              
+
+             
+                <label class="label" for="link">Link</label>
+                <input class="input" class="input" required
+                  type="url"
+                  id="link"
+                  name="link"
+                  value="<%= roupaAtualPut.link %>"
+                />
+             
+              
+                <button id="btn_put" type="submit"> Atualizar </button>
+              
+                </form>
+
+        </div>
+
+    </div>
+   
+        
+</section>

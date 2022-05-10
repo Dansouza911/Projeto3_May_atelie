@@ -14,3 +14,4 @@ export const connection = new Sequelize(
         dialect: 'postgres'
     }
 )
+

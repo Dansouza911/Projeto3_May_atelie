@@ -9,10 +9,13 @@ const app = express();
 const PORT = 3001 || process.env.PORT;
 let __dirname = path.resolve(path.dirname(""));
 
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+
 app.set("view engine", "ejs");
 app.use(routers);
 app.use(express.static(path.join(__dirname, "public")));
-app.use(express.urlencoded());
+
 
 app.listen(PORT, () => {
   console.log("Estou rodando na porta 3001");

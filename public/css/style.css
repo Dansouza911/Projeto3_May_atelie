@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+a {
+  text-decoration: none;
+}
+
 @font-face {
   font-family: "Sacramento";
   src: url("../fonts/Sacramento-Regular.ttf");
@@ -17,11 +21,11 @@ body {
   width: 100vw;
   max-width: 100%;
   background-color: #fcd5ce;
-  font-family: "Sacramento";
+  font-family: "bodoni";
 }
 main {
   min-height: 80%;
-  font-family: "Bodoni";
+  font-family: "bodoni";
  
   
 }
@@ -31,13 +35,15 @@ header {
   background: linear-gradient(#f8edeb, #fae1dd);
   box-shadow: 10px 10px 30px -20px #010101;
   display: flex;
- 
+
   justify-content: center;
   align-items: center;
  
 }
 
-
+#h1 {
+  font-family:'Sacramento' ;
+}
 header h1 {
   font-size: 40px;
   gap: 10px;
@@ -46,7 +52,8 @@ header h1 {
 
 header nav {
   display: flex;
-  justify-content: center;
+ 
+  justify-content: right;
   width: 100%;
 }
 header img#logo {
@@ -56,12 +63,133 @@ header img#logo {
 header nav ul {
   display: flex;
   color: black;
-  gap: 50px;
+  gap: 10px;
   list-style: none;
-  font-size: 30px;
+  font-size: 1.5rem;
   font-family: 'bodoni';
+  flex-wrap: wrap;
+}
+header a {
+  color: black;
+  text-decoration: none;
+  padding: .9rem;
+  display: inline-block;
+}
+header a:hover {
+  background-color: #ffdab9;
+  color: black;
+  transition: background 0.8s;
 }
 
+section.card_principal {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  padding: 16px;
+  gap: 16px;
+}
+
+section article.cards {
+  height: 350px;
+  width: 250px;
+  
+  
+}
+
+article.cards div.card_img {
+  display: flex;
+  justify-content: center;
+  height: 90%;
+ 
+  
+}
+
+article.cards div.card_img img {
+  height: 100%;
+  border: #ffdab9 outset 2px;
+  box-shadow: 10px 15px 40px -20px #010101;
+}
+
+article.cards div.card_name {
+  display: flex;
+  color: #343a40;
+  
+  justify-content: left;
+  height: 10%;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+div.btn_container {
+display: flex;
+flex-direction: column;
+
+}
+
+#btn_submit   {
+  padding: .6rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px #f4978e;
+  border-radius: 10px 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+#btn_submit:hover {
+  background-color: #f4978e;
+
+}
+
+main.detalhes {
+  display: flex;
+  justify-content: center;
+  
+}
+
+
+section.detalhes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  padding: 1rem;
+  width: 30rem;
+  border-radius: 3%;
+  align-items: center;
+  
+  flex-direction: column;
+  border: #f4978e outset 3px;
+  margin-top: 20px;
+  padding: 16px;
+  background: linear-gradient(#fbc4ab, #f8ad9d, #f4978e);
+    
+}
+
+p.detalheNome {
+  font-size: 30px;
+  
+}
+p.detalheTamanho {
+
+  font-size: 20px;
+  
+}
+
+div#imagem {
+  display: flex;
+  justify-content: center;
+}
+
+div#imagem img {
+width: 70%;
+}
 
 
 
@@ -76,21 +204,318 @@ div.sub__header {
     box-shadow: 10px 10px 40px -20px #010101;
 }
 
-footer {
-  height: 10%;
-  font-family: "Bodoni";
+section#cadastro {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+padding: 20px;
+height: 100%;
+
+}
+
+section#cadastro form{
   display: flex;
-  background: linear-gradient(#f8edeb, #fae1dd);
-  box-shadow: 10px 10px 40px -20px #010101;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+   flex-direction: column;
+   width: 90%;
+  margin-top: 1rem;
+  
+ }
+
+ 
+
+
+ section#cadastro fieldset.fildMain{
+   display: flex;
+   justify-content: center;
+   width: 80%;
+   
+ }
+ section#cadastro fieldset.fildMain label{
+  width: 100%;
+  height: 30px;
+    
+  }
+
+section#cadastro fieldset.fildMain input{
+width: 100%;
+height: 30px;
+  
+}
+
+ section#cadastro form button.btn_submit {
+  background-color: aqua;
+  color: #010101;
+  height: 40px;
+  width: 60px;
+}
+
+section#cadastro form div.btn_container {
+  display: flex;
   justify-content: center;
 }
 
- div#iframe{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    
+.modal-overlay {
+  font-family: 'bodoni';
+  background-color: rgba(0, 0, 0, 0.509);
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.modal{
+  margin: 1rem;
+  width: 100%;
+  max-width: 600px;
+  height: auto;
+  min-height: 300px;
+  background-color: #fff;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  overflow:hidden;
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f8ad9d;
+  padding: 1rem; 
+}
+
+.modal-header a#close-modal-put{
+  font-size: 1.4rem;
+  
+}
+.modal-body {
+  padding: .5rem 1rem;
+  display: flex;
+  flex: 1;
+  align-content: center;
+  flex-wrap: wrap ;
 
 }
 
+.form-modal {
+  display: flex;
+  flex-wrap: wrap;
+
+}
+
+.form-modal input.input {
+  width: 100%;
+  padding: .5rem;
+  font-size: .8rem;
+  border: solid 2px #ccc;
+}
+
+
+.form-modal label.label {
+  padding-top: .5rem;
+}
+.form-modal button#btn_put {
+  padding: .6rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px #f4978e;
+  border-radius: 10px 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.form-modal button#btn_put:hover {
+  background-color: #f4978e;
+}
+
+.modal-body p {
+  width: 100%;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+div#btns-del {
+display: flex;
+margin: 0 auto;
+}
+
+div#btns-del a{
+  padding: .7rem;
+  text-decoration: none;
+  width: 100%;
+  margin: 2rem 1rem 1rem;
+border-radius: 3px;
+}
+
+div#btns-del a#no {
+  color: red;
+  border: solid 1px red;
+  transition: all .3s ease-in-out;
+}
+
+div#btns-del a#no:hover{
+ color: black;
+ background-color: #f4978e;
+}
+div#btns-del a#yes {
+  color: red;
+  border: solid 1px red;
+  transition: all .3s ease-in-out;
+}
+
+div#btns-del a#yes:hover{
+ color: black;
+ background-color: #f4978e;
+}
+
+
+
+footer {
+  height: 10%;
+  margin-top: 5px ;
+  padding: 10px;
+  font-family: "Bodoni";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(#f8edeb, #fae1dd);
+  box-shadow: 5px 0px 25px -10px #010101;
+  justify-content: center;
+  gap: 5px;
+}
+
+p#instagram img {
+  height: 15px;
+}
+
+p#autor img {
+  height: 15px;
+}
+
+ iframe{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width:400px;
+    height:400px;
     
+
+}
+div#iframe{
+  display: flex;
+  justify-content: center;
+  padding: 30px;
+}
+
+.shiny-button {
+  padding: .6rem;
+  width: 10rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem auto;
+  font-size: 1rem;
+  background-color: #fff;
+  border: solid 1px #f4978e;
+  border-radius: 10px 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.shiny-button:hover {
+  color: #ffffff;
+  background-color: #0073de;
+  background-image: -webkit-linear-gradient(
+    top,
+    #0076e3 0%,
+    #2087e6 48%,
+    #0073de 49%,
+    #0073de 82%,
+    #0082fa 100%
+  );
+  background-image: -moz-linear-gradient(
+    top,
+    #0076e3 0%,
+    #2087e6 48%,
+    #0073de 49%,
+    #0073de 82%,
+    #0082fa 100%
+  );
+  background-image: -o-linear-gradient(
+    top,
+    #0076e3 0%,
+    #2087e6 48%,
+    #0073de 49%,
+    #0073de 82%,
+    #0082fa 100%
+  );
+  background-image: linear-gradient(
+    top,
+    #0076e3 0%,
+    #2087e6 48%,
+    #0073de 49%,
+    #0073de 82%,
+    #0082fa 100%
+  );
+  border-color: hsl(209, 41%, 44%);
+  -webkit-box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 0 1px 1px #2697ff, 0 0 1px 3px rgba(0, 0, 0, 0.15);
+  -webkit-text-shadow: 1px 1px 1px #003e78;
+  -moz-text-shadow: 1px 1px 1px #003e78;
+  -o-text-shadow: 1px 1px 1px #003e78;
+  text-shadow: 1px 1px 1px #003e78;
+}
+
+
+
+@media screen and (max-width: 720px) {
+  main.detalhes section.detalhes {
+    width: 100%;
+  }
+
+  header {
+    height: 50%;
+    flex-direction: column;
+  }
+  header img#logo {
+    height: 30%;
+  }
+  section.detalhes img {
+    margin-left: 1rem;
+  }
+  form button {
+    width: 100%;
+  }
+  form label {
+    width: 70%;
+  }
+
+
+footer {
+  height: 20%;
+}
+
+
+section#cadastro fieldset.fildMain {
+padding: .5rem 1rem;
+display: flex;
+flex: 1;
+align-content: center;
+flex-wrap: wrap ;
+}
+}

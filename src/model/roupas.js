@@ -23,7 +23,7 @@ export const roupas = connection.define('roupas', {
         allowNull: false
     },
     preço:{
-        type: Sequelize.FLOAT,
+        type: Sequelize.INTEGER,
         allowNull: false
     },
     link:{
@@ -36,6 +36,12 @@ export const roupas = connection.define('roupas', {
     timestamps: false
 })
 
+/* function initTable () {
+    roupas.async()
+
+}
+
+initTable() */
 
 
 

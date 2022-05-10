@@ -5,37 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="/css/style.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a6a936530c.js" crossorigin="anonymous"></script>
     <title>May Ateliê</title>
 </head>
 <body>
     <%- include('./partials/header.ejs') %> 
     <main>
+       
             <section class="card_principal">
             <% catalogo.forEach((roupas)=>{ %>
                 <a href="/detalhes/<%= roupas.id %> "> 
                     <article class="cards">
-                        <div class="card_name">
-                            <%= roupas.nome_roupa %>
-                        </div>
+                       
                         <div class="card_img">
                             <img src="<%= roupas.img %> " alt="<%= roupas.nome_roupa %> imagem"> 
                             
+                        </div>
+                        <div class="card_name">
+                            <%= roupas.nome_roupa %>
                         </div>
                         
                     </article>
                 <div></div>   
                    
-
-                   <% } ) %> 
-
                 </a>
+                <div class="btn_container">
+                    
+                    <a href="/getById/<%= roupas.id %>/delete"><i class="fa-solid fa-trash"></i></a>
+                    <a href="/getById/<%= roupas.id %>/put"> <i class="fa-regular fa-pen-to-square"></i></a>
+
+                </div>
+                <% } ) %>
         </section>
         
 
         
     </main>
-    
+        <% if (roupaAtualPut != null) { %> 
+            <%- include('./partials/modalPut.ejs') %>
+        
+   <% } %>    
 
+   <% if (roupaAtualDel != null) { %> 
+    <%- include('./partials/modalDel.ejs') %>
+
+<% } %>   
+   
 
     <%- include('./partials/footer.ejs') %>
 </body>
